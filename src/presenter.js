@@ -1,8 +1,9 @@
 
-const first = document.querySelector("#cantidad-numero");
-const second = document.querySelector("#precio-numero");
-const calculo = document.querySelector("#calcular-button");
+const first = document.querySelector("#txtcantidad");
+const second = document.querySelector("#txtprecio");
+const calculo = document.querySelector("#btncalcular");
 const div = document.querySelector("#resultado-div");
+const slcestado=document.querySelector("#slcestado");
 
 div.style.display="none";
 
@@ -12,6 +13,8 @@ calculo.addEventListener("click", (event) => {
   div.style.display="block";
   const firstNumber = Number.parseInt(first.value);
   const secondNumber = Number.parseInt(second.value);
-  div.innerHTML = "<p> CANTIDAD: " +firstNumber + " PRECIO: "+ secondNumber + "</p>";
+  const nombreestado=slcestado.value;
+  div.innerHTML = "<p> CANTIDAD: " +firstNumber + " PRECIO: "+ secondNumber + "</p>"+
+  "<p> Seleccionaste el estado de: "+nombreestado+"</p>";
 
 });
