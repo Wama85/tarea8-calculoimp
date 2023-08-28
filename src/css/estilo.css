@@ -1,0 +1,28 @@
+#calcular-form{
+    width: 50%;
+    margin: auto;
+}
+input,select {
+ width: 50%;
+ height: 30px;
+ border-radius: 5px;
+ margin:20px;
+}
+label{
+    width: 50%;
+    font-size: 20px;
+}
+#calcular-button{
+    color: white;
+    font-weight: bold;
+    background-color: rgb(11, 110, 61);
+}
+#resultado-div{
+    width: 40%;
+    margin: auto;
+    border: 1px dashed  blue;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}

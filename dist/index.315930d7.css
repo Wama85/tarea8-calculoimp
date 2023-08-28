@@ -1,0 +1,34 @@
+#calcular-form {
+  width: 50%;
+  margin: auto;
+}
+
+input, select {
+  width: 50%;
+  height: 30px;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+label {
+  width: 50%;
+  font-size: 20px;
+}
+
+#calcular-button {
+  color: #fff;
+  background-color: #0b6e3d;
+  font-weight: bold;
+}
+
+#resultado-div {
+  width: 40%;
+  text-align: center;
+  border: 1px dashed #00f;
+  border-radius: 5px;
+  margin: auto;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=index.315930d7.css.map */
