@@ -18,11 +18,17 @@ label{
     background-color: rgb(11, 110, 61);
 }
 #resultado-div{
-    width: 40%;
+    width: 50%;
+   
     margin: auto;
     border: 1px dashed  blue;
     border-radius: 5px;
     text-align: center;
     font-weight: bold;
     font-size: 25px;
+}
+#resultado-div p{
+  
+    text-align: left;
+   
 }

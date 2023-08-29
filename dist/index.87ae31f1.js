@@ -557,20 +557,82 @@ function hmrAccept(bundle, id) {
 }
 
 },{}],"jZ78i":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var _impuesto = require("./impuesto");
+var _impuestoDefault = parcelHelpers.interopDefault(_impuesto);
 const first = document.querySelector("#txtcantidad");
 const second = document.querySelector("#txtprecio");
 const calculo = document.querySelector("#btncalcular");
 const div = document.querySelector("#resultado-div");
-const slcestado = document.querySelector("#slcestado");
+const selecestado = document.querySelector("#slcestado");
 div.style.display = "none";
+let impuesto = 0;
 calculo.addEventListener("click", (event)=>{
     event.preventDefault();
     div.style.display = "block";
     const firstNumber = Number.parseInt(first.value);
     const secondNumber = Number.parseInt(second.value);
-    const nombreestado = slcestado.value;
-    div.innerHTML = "<p> CANTIDAD: " + firstNumber + " PRECIO: " + secondNumber + "</p>" + "<p> Seleccionaste el estado de: " + nombreestado + "</p>";
+    const nombreestado = selecestado.value;
+    impuesto = (0, _impuestoDefault.default)(nombreestado);
+    div.innerHTML = "<p> CANTIDAD: " + firstNumber + "</p><p> PRECIO: " + secondNumber + "</p>" + "<p> IMPUESTO: " + nombreestado + " " + impuesto + " % </p>";
 });
+
+},{"./impuesto":"2AzX3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2AzX3":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function impuestoEstado(nombreestado) {
+    if (nombreestado === "CA") {
+        impuesto = 8.25;
+        return impuesto;
+    }
+    if (nombreestado === "NV") {
+        impuesto = 8;
+        return impuesto;
+    }
+    if (nombreestado === "TX") {
+        impuesto = 6.25;
+        return impuesto;
+    }
+    if (nombreestado === "AL") {
+        impuesto = 4.00;
+        return impuesto;
+    }
+    if (nombreestado === "UT") {
+        impuesto = 6.65;
+        return impuesto;
+    }
+}
+exports.default = impuestoEstado;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
 
 },{}]},["l4Kmt","jZ78i"], "jZ78i", "parcelRequirec771")
 

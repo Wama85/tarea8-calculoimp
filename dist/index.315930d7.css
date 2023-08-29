@@ -22,13 +22,17 @@ label {
 }
 
 #resultado-div {
-  width: 40%;
+  width: 50%;
   text-align: center;
   border: 1px dashed #00f;
   border-radius: 5px;
   margin: auto;
   font-size: 25px;
   font-weight: bold;
+}
+
+#resultado-div p {
+  text-align: left;
 }
 
 /*# sourceMappingURL=index.315930d7.css.map */
