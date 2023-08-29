@@ -23,7 +23,7 @@ calculo.addEventListener("click", (event) => {
   let {totalConDescuento,descuento}=calculartotal(precioneto,impuesto);
   div.innerHTML = 
   "<p> CANTIDAD: " +firstNumber + "</p><p> PRECIO: "+ secondNumber + "</p>"+
-  "<p>DESCUENTO: % "+descuento+"</p>"+
+  "<p>DESCUENTO: $ "+descuento+"</p>"+
   "<p> IMPUESTO: "+nombreestado +" "+impuesto +" % </p>"+
   "<p> PRECIO NETO ("+firstNumber+"*  $"+secondNumber+ "): $"+precioneto+"</p>"+
   "<p> PRECIO TOTAL (DESCUENTO E IMPUESTOS): $"+totalConDescuento+"</p>";
