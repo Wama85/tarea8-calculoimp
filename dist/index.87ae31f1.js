@@ -576,8 +576,8 @@ calculo.addEventListener("click", (event)=>{
     const nombreestado = selecestado.value;
     let precioneto = (0, _calcular.calcularneto)(firstNumber, secondNumber);
     impuesto = (0, _impuestoDefault.default)(nombreestado);
-    let preciototal = (0, _calcular.calculartotal)(precioneto, impuesto);
-    div.innerHTML = "<p> CANTIDAD: " + firstNumber + "</p><p> PRECIO: " + secondNumber + "</p>" + "<p> IMPUESTO: " + nombreestado + " " + impuesto + " % </p>" + "<p> PRECIO NETO: " + precioneto + "</p>" + "<p> PRECIO TOTAL + IMPUESTOS: " + preciototal + "</p>";
+    let { totalConDescuento , descuento  } = (0, _calcular.calculartotal)(precioneto, impuesto);
+    div.innerHTML = "<p> CANTIDAD: " + firstNumber + "</p><p> PRECIO: " + secondNumber + "</p>" + "<p>DESCUENTO: % " + descuento + "</p>" + "<p> IMPUESTO: " + nombreestado + " " + impuesto + " % </p>" + "<p> PRECIO NETO (" + firstNumber + "*  $" + secondNumber + "): $" + precioneto + "</p>" + "<p> PRECIO TOTAL (DESCUENTO E IMPUESTOS): $" + totalConDescuento + "</p>";
 });
 
 },{"./impuesto":"2AzX3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./calcular":"8076B"}],"2AzX3":[function(require,module,exports) {
@@ -649,7 +649,18 @@ function calcularneto(a, b) {
     return a * b;
 }
 function calculartotal(total, impuesto) {
-    return total * impuesto / 100 + total;
+    let descuento = 0;
+    if (total >= 1000 && total < 3000) {
+        descuento = total * 0.01;
+        return {
+            totalConDescuento: total * impuesto / 100 + total - descuento,
+            descuento: descuento
+        };
+    }
+    return {
+        totalConDescuento: total * impuesto / 100 + total,
+        descuento: 0
+    };
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./impuesto":"2AzX3"}]},["l4Kmt","jZ78i"], "jZ78i", "parcelRequirec771")

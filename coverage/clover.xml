@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1693280010028" clover="3.2.0">
-  <project timestamp="1693280010028" name="All files">
-    <metrics statements="17" coveredstatements="17" conditionals="10" coveredconditionals="9" methods="3" coveredmethods="3" elements="30" coveredelements="29" complexity="0" loc="17" ncloc="17" packages="1" files="2" classes="2"/>
+<coverage generated="1693282480050" clover="3.2.0">
+  <project timestamp="1693282480050" name="All files">
+    <metrics statements="21" coveredstatements="21" conditionals="14" coveredconditionals="13" methods="3" coveredmethods="3" elements="38" coveredelements="37" complexity="0" loc="21" ncloc="21" packages="1" files="2" classes="2"/>
     <file name="calcular.js" path="D:\Users\Wilner\Desktop\UCB 2-2023\INGENIERIA DE SOFTWARE\Tarea 8\tarea8-calculoimp\src\calcular.js">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
       <line num="3" count="6" type="stmt"/>
-      <line num="8" count="5" type="stmt"/>
+      <line num="7" count="6" type="stmt"/>
+      <line num="9" count="6" type="cond" truecount="4" falsecount="0"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="18" count="5" type="stmt"/>
     </file>
     <file name="impuesto.js" path="D:\Users\Wilner\Desktop\UCB 2-2023\INGENIERIA DE SOFTWARE\Tarea 8\tarea8-calculoimp\src\impuesto.js">
       <metrics statements="15" coveredstatements="15" conditionals="10" coveredconditionals="9" methods="1" coveredmethods="1"/>
