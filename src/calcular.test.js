@@ -47,10 +47,15 @@ describe("CALCULAR TOTAL", () => {
          let {totalConDescuento,descuento}=calculartotal(1000,8.25);
         expect(totalConDescuento).toEqual(1072.5);
       });
-       //impuesto, precio y descuento de > 1000
-       it("MOSTRAR PRECIO TOTAL + IMPUESTO Y DESCUENTO DE > 1000 ", () => {
+       //impuesto, precio y descuento de > 3000
+       it("MOSTRAR PRECIO TOTAL + IMPUESTO Y DESCUENTO DE > 3000 ", () => {
         let {totalConDescuento,descuento}=calculartotal(3000,8.25);
        expect(totalConDescuento).toEqual(3187.5);
+     });
+       //impuesto, precio y descuento de > 7000
+       it("MOSTRAR PRECIO TOTAL + IMPUESTO Y DESCUENTO DE > 7000 ", () => {
+        let {totalConDescuento,descuento}=calculartotal(7000,8.25);
+       expect(totalConDescuento).toEqual(7367.5);
      });
 
 

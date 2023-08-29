@@ -664,6 +664,13 @@ function calculartotal(total, impuesto) {
             descuento: descuento
         };
     }
+    if (total >= 7000 && total < 10000) {
+        descuento = total * 0.03;
+        return {
+            totalConDescuento: total * impuesto / 100 + total - descuento,
+            descuento: descuento
+        };
+    }
     return {
         totalConDescuento: total * impuesto / 100 + total,
         descuento: 0
