@@ -41,6 +41,14 @@ function calculartotal(total,impuesto) {
       descuento:descuento,
    }; 
   }
+  if (total>=30000) {
+    descuento=total*0.05;
+
+    return{
+      totalConDescuento:((total * impuesto/100)+total)-descuento,
+      descuento:descuento,
+   }; 
+  }
 
   
 

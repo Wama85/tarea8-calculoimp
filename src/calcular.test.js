@@ -63,6 +63,11 @@ describe("CALCULAR TOTAL", () => {
         let {totalConDescuento,descuento}=calculartotal(10000,8.25);
        expect(totalConDescuento).toEqual(10425);
      });
+      //impuesto, precio y descuento de > 30000
+      it("MOSTRAR PRECIO TOTAL + IMPUESTO Y DESCUENTO DE > 30000 ", () => {
+        let {totalConDescuento,descuento}=calculartotal(30000,8.25);
+       expect(totalConDescuento).toEqual(30975);
+     });
 
 
 

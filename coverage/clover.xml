@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1693283337578" clover="3.2.0">
-  <project timestamp="1693283337578" name="All files">
-    <metrics statements="30" coveredstatements="30" conditionals="26" coveredconditionals="25" methods="3" coveredmethods="3" elements="59" coveredelements="58" complexity="0" loc="30" ncloc="30" packages="1" files="2" classes="2"/>
+<coverage generated="1693283810887" clover="3.2.0">
+  <project timestamp="1693283810887" name="All files">
+    <metrics statements="33" coveredstatements="33" conditionals="28" coveredconditionals="27" methods="3" coveredmethods="3" elements="64" coveredelements="63" complexity="0" loc="33" ncloc="33" packages="1" files="2" classes="2"/>
     <file name="calcular.js" path="D:\Users\Wilner\Desktop\UCB 2-2023\INGENIERIA DE SOFTWARE\Tarea 8\tarea8-calculoimp\src\calcular.js">
-      <metrics statements="15" coveredstatements="15" conditionals="16" coveredconditionals="16" methods="2" coveredmethods="2"/>
+      <metrics statements="18" coveredstatements="18" conditionals="18" coveredconditionals="18" methods="2" coveredmethods="2"/>
       <line num="3" count="6" type="stmt"/>
-      <line num="7" count="9" type="stmt"/>
-      <line num="9" count="9" type="cond" truecount="4" falsecount="0"/>
+      <line num="7" count="10" type="stmt"/>
+      <line num="9" count="10" type="cond" truecount="4" falsecount="0"/>
       <line num="10" count="1" type="stmt"/>
       <line num="12" count="1" type="stmt"/>
-      <line num="18" count="8" type="cond" truecount="4" falsecount="0"/>
+      <line num="18" count="9" type="cond" truecount="4" falsecount="0"/>
       <line num="19" count="1" type="stmt"/>
       <line num="21" count="1" type="stmt"/>
-      <line num="27" count="7" type="cond" truecount="4" falsecount="0"/>
+      <line num="27" count="8" type="cond" truecount="4" falsecount="0"/>
       <line num="28" count="1" type="stmt"/>
       <line num="30" count="1" type="stmt"/>
-      <line num="36" count="6" type="cond" truecount="4" falsecount="0"/>
+      <line num="36" count="7" type="cond" truecount="4" falsecount="0"/>
       <line num="37" count="1" type="stmt"/>
       <line num="39" count="1" type="stmt"/>
-      <line num="48" count="5" type="stmt"/>
+      <line num="44" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="45" count="1" type="stmt"/>
+      <line num="47" count="1" type="stmt"/>
+      <line num="56" count="5" type="stmt"/>
     </file>
     <file name="impuesto.js" path="D:\Users\Wilner\Desktop\UCB 2-2023\INGENIERIA DE SOFTWARE\Tarea 8\tarea8-calculoimp\src\impuesto.js">
       <metrics statements="15" coveredstatements="15" conditionals="10" coveredconditionals="9" methods="1" coveredmethods="1"/>
