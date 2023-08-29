@@ -27,6 +27,13 @@ describe("CALCULAR TOTAL", () => {
     let total=calculartotal(neto,impuestoCA);
     expect(total).toEqual(104);
   });
+    //impuesto y precio de NV
+    it("MOSTRAR IMPUESTO Y PORCENTAJE DE NV ", () => {
+      const impuestoCA=impuestoEstado("NV");
+      const neto=calcularneto(100, 1);
+      let total=calculartotal(neto,impuestoCA);
+      expect(total).toEqual(108);
+    });
 
 
 
