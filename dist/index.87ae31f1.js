@@ -576,8 +576,8 @@ calculo.addEventListener("click", (event)=>{
     const nombreestado = selecestado.value;
     let precioneto = (0, _calcular.calcularneto)(firstNumber, secondNumber);
     impuesto = (0, _impuestoDefault.default)(nombreestado);
-    let { totalConDescuento , descuento  } = (0, _calcular.calculartotal)(precioneto, impuesto);
-    div.innerHTML = "<p> CANTIDAD: " + firstNumber + "</p><p> PRECIO: " + secondNumber + "</p>" + "<p>DESCUENTO: $ " + descuento + "</p>" + "<p> IMPUESTO: " + nombreestado + " " + impuesto + " % </p>" + "<p> PRECIO NETO (" + firstNumber + "*  $" + secondNumber + "): $" + precioneto + "</p>" + "<p> PRECIO TOTAL (DESCUENTO E IMPUESTOS): $" + totalConDescuento + "</p>";
+    let { totalConDescuento , descuento , totalConImpuesto  } = (0, _calcular.calculartotal)(precioneto, impuesto);
+    div.innerHTML = "<p> CANTIDAD: " + firstNumber + "</p><p> PRECIO: " + secondNumber + "</p>" + "<p>DESCUENTO: $ " + descuento + "</p>" + "<p> IMPUESTO: " + nombreestado + " " + impuesto + " % </p>" + "<p> PRECIO NETO (" + firstNumber + "*  $" + secondNumber + "): $" + precioneto + "</p>" + "<p> PRECIO TOTAL + IMPUESTO (" + precioneto + "*  $" + impuesto + "): $" + totalConImpuesto + "</p>" + "<p> PRECIO TOTAL (DESCUENTO E IMPUESTOS): $" + totalConDescuento + "</p>";
 });
 
 },{"./impuesto":"2AzX3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./calcular":"8076B"}],"2AzX3":[function(require,module,exports) {
@@ -654,40 +654,46 @@ function calculartotal(total, impuesto) {
         descuento = total * 0.01;
         return {
             totalConDescuento: total * impuesto / 100 + total - descuento,
-            descuento: descuento
+            descuento: descuento,
+            totalConImpuesto: total * impuesto / 100 + total
         };
     }
     if (total >= 3000 && total < 7000) {
         descuento = total * 0.02;
         return {
             totalConDescuento: total * impuesto / 100 + total - descuento,
-            descuento: descuento
+            descuento: descuento,
+            totalConImpuesto: total * impuesto / 100 + total
         };
     }
     if (total >= 7000 && total < 10000) {
         descuento = total * 0.03;
         return {
             totalConDescuento: total * impuesto / 100 + total - descuento,
-            descuento: descuento
+            descuento: descuento,
+            totalConImpuesto: total * impuesto / 100 + total
         };
     }
     if (total >= 10000 && total < 30000) {
         descuento = total * 0.04;
         return {
             totalConDescuento: total * impuesto / 100 + total - descuento,
-            descuento: descuento
+            descuento: descuento,
+            totalConImpuesto: total * impuesto / 100 + total
         };
     }
     if (total >= 30000) {
         descuento = total * 0.05;
         return {
             totalConDescuento: total * impuesto / 100 + total - descuento,
-            descuento: descuento
+            descuento: descuento,
+            totalConImpuesto: total * impuesto / 100 + total
         };
     }
     return {
         totalConDescuento: total * impuesto / 100 + total,
-        descuento: 0
+        descuento: 0,
+        totalConImpuesto: total * impuesto / 100 + total
     };
 }
 

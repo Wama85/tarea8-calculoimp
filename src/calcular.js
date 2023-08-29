@@ -8,10 +8,12 @@ function calculartotal(total,impuesto) {
   
   if ((total>=1000) && (total<3000)){
     descuento=total*0.01;
-
+    
     return{
       totalConDescuento:((total * impuesto/100)+total)-descuento,
       descuento:descuento,
+      totalConImpuesto:(total * impuesto/100)+total,
+      
    }; 
   }
 
@@ -21,6 +23,7 @@ function calculartotal(total,impuesto) {
     return{
       totalConDescuento:((total * impuesto/100)+total)-descuento,
       descuento:descuento,
+      totalConImpuesto:(total * impuesto/100)+total,
    }; 
   }
 
@@ -30,6 +33,7 @@ function calculartotal(total,impuesto) {
     return{
       totalConDescuento:((total * impuesto/100)+total)-descuento,
       descuento:descuento,
+      totalConImpuesto:(total * impuesto/100)+total,
    }; 
   }
 
@@ -39,6 +43,7 @@ function calculartotal(total,impuesto) {
     return{
       totalConDescuento:((total * impuesto/100)+total)-descuento,
       descuento:descuento,
+      totalConImpuesto:(total * impuesto/100)+total,
    }; 
   }
   if (total>=30000) {
@@ -47,6 +52,7 @@ function calculartotal(total,impuesto) {
     return{
       totalConDescuento:((total * impuesto/100)+total)-descuento,
       descuento:descuento,
+      totalConImpuesto:(total * impuesto/100)+total,
    }; 
   }
 
@@ -56,6 +62,7 @@ function calculartotal(total,impuesto) {
 return {
   totalConDescuento: (total * impuesto/100)+total,
   descuento:0,
+  totalConImpuesto:(total * impuesto/100)+total,
 };
   
 }
