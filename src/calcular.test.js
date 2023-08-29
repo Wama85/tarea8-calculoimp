@@ -5,11 +5,21 @@ describe("CALCULAR TOTAL", () => {
   it("MOSTRAR EL PRECIO NETO", () => {
     expect(calcularneto(3, 2)).toEqual(6);
   });
-  
+//impuesto y precio de CA
   it("MOSTRAR IMPUESTO Y PORCENTAJE DE CA ", () => {
     const impuestoCA=impuestoEstado("CA");
     const neto=calcularneto(100, 1);
     let total=calculartotal(neto,impuestoCA);
     expect(total).toEqual(108.25);
   });
+
+  //impuesto y precio de TX
+  it("MOSTRAR IMPUESTO Y PORCENTAJE DE TX ", () => {
+    const impuestoCA=impuestoEstado("TX");
+    const neto=calcularneto(100, 1);
+    let total=calculartotal(neto,impuestoCA);
+    expect(total).toEqual(106.25);
+  });
+  
+
 });
