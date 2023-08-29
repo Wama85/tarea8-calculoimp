@@ -34,6 +34,13 @@ describe("CALCULAR TOTAL", () => {
       let total=calculartotal(neto,impuestoCA);
       expect(total).toEqual(108);
     });
+      //impuesto y precio de UT
+      it("MOSTRAR IMPUESTO Y PORCENTAJE DE UT ", () => {
+        const impuestoCA=impuestoEstado("UT");
+        const neto=calcularneto(100, 1);
+        let total=calculartotal(neto,impuestoCA);
+        expect(total).toEqual(106.65);
+      });
 
 
 
