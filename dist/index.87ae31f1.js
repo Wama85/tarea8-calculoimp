@@ -561,7 +561,6 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _impuesto = require("./impuesto");
 var _impuestoDefault = parcelHelpers.interopDefault(_impuesto);
 var _calcular = require("./calcular");
-var _calcularDefault = parcelHelpers.interopDefault(_calcular);
 const first = document.querySelector("#txtcantidad");
 const second = document.querySelector("#txtprecio");
 const calculo = document.querySelector("#btncalcular");
@@ -575,15 +574,17 @@ calculo.addEventListener("click", (event)=>{
     const firstNumber = Number.parseInt(first.value);
     const secondNumber = Number.parseInt(second.value);
     const nombreestado = selecestado.value;
-    let precioneto = (0, _calcularDefault.default)(firstNumber, secondNumber);
+    let precioneto = (0, _calcular.calcularneto)(firstNumber, secondNumber);
     impuesto = (0, _impuestoDefault.default)(nombreestado);
-    div.innerHTML = "<p> CANTIDAD: " + firstNumber + "</p><p> PRECIO: " + secondNumber + "</p>" + "<p> IMPUESTO: " + nombreestado + " " + impuesto + " % </p>" + "<p> PRECIO NETO: " + precioneto + "</p>";
+    let preciototal = (0, _calcular.calculartotal)(precioneto, impuesto);
+    div.innerHTML = "<p> CANTIDAD: " + firstNumber + "</p><p> PRECIO: " + secondNumber + "</p>" + "<p> IMPUESTO: " + nombreestado + " " + impuesto + " % </p>" + "<p> PRECIO NETO: " + precioneto + "</p>" + "<p> PRECIO TOTAL + IMPUESTOS: " + preciototal + "</p>";
 });
 
 },{"./impuesto":"2AzX3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./calcular":"8076B"}],"2AzX3":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 function impuestoEstado(nombreestado) {
+    let impuesto;
     if (nombreestado === "CA") {
         impuesto = 8.25;
         return impuesto;
@@ -640,11 +641,17 @@ exports.export = function(dest, destName, get) {
 },{}],"8076B":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "calcularneto", ()=>calcularneto);
+parcelHelpers.export(exports, "calculartotal", ()=>calculartotal);
+var _impuesto = require("./impuesto");
+var _impuestoDefault = parcelHelpers.interopDefault(_impuesto);
 function calcularneto(a, b) {
     return a * b;
 }
-exports.default = calcularneto;
+function calculartotal(total, impuesto) {
+    return total * impuesto / 100 + total;
+}
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["l4Kmt","jZ78i"], "jZ78i", "parcelRequirec771")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./impuesto":"2AzX3"}]},["l4Kmt","jZ78i"], "jZ78i", "parcelRequirec771")
 
 //# sourceMappingURL=index.87ae31f1.js.map

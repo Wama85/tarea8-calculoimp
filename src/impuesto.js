@@ -1,10 +1,11 @@
 function impuestoEstado(nombreestado){
+   let impuesto;
    if(nombreestado ==="CA"){
       impuesto=8.25;
       return impuesto;
    }
    if(nombreestado ==="NV"){
-       impuesto= 8;
+       impuesto=8;
        return impuesto;
    }
    if(nombreestado ==="TX"){
