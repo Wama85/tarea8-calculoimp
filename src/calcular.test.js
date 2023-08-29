@@ -20,6 +20,14 @@ describe("CALCULAR TOTAL", () => {
     let total=calculartotal(neto,impuestoCA);
     expect(total).toEqual(106.25);
   });
-  
+   //impuesto y precio de AL
+   it("MOSTRAR IMPUESTO Y PORCENTAJE DE AL ", () => {
+    const impuestoCA=impuestoEstado("AL");
+    const neto=calcularneto(100, 1);
+    let total=calculartotal(neto,impuestoCA);
+    expect(total).toEqual(104);
+  });
+
+
 
 });
