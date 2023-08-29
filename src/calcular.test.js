@@ -58,6 +58,12 @@ describe("CALCULAR TOTAL", () => {
        expect(totalConDescuento).toEqual(7367.5);
      });
 
+       //impuesto, precio y descuento de > 10000
+       it("MOSTRAR PRECIO TOTAL + IMPUESTO Y DESCUENTO DE > 10000 ", () => {
+        let {totalConDescuento,descuento}=calculartotal(10000,8.25);
+       expect(totalConDescuento).toEqual(10425);
+     });
+
 
 
 });

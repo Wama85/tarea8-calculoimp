@@ -33,6 +33,15 @@ function calculartotal(total,impuesto) {
    }; 
   }
 
+  if ((total>=10000) && (total<30000)){
+    descuento=total*0.04;
+
+    return{
+      totalConDescuento:((total * impuesto/100)+total)-descuento,
+      descuento:descuento,
+   }; 
+  }
+
   
 
 
